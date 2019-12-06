@@ -36,10 +36,10 @@ jobs:
       - checkout
 
       - run:
-          shell: /bin/sh
           command: |
             sudo apt update
             sudo apt install git
+            sudo apt install sudo
             git --version
             git clone https://github.com/18F/cf-hello-worlds.git
 workflows:
