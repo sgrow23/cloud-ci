@@ -28,9 +28,20 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+  three:
+    docker:
+      - image: debian:stretch
+
+    steps:
+      - checkout
+
+      - run:
+          name: HelloWorldCheckout
+          command: git clone https://github.com/18F/cf-hello-worlds.git
 workflows:
   version: 2
-  one_and_two:
+  one_and_two_three:
     jobs:
       - one
       - two
+      - three
