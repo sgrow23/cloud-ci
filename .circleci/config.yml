@@ -36,8 +36,9 @@ jobs:
       - checkout
 
       - run:
-          name: HelloWorldCheckout
-          command: git clone https://github.com/18F/cf-hello-worlds.git
+          command: |
+            pwd
+            git clone https://github.com/18F/cf-hello-worlds.git
 workflows:
   version: 2
   one_and_two_three:
